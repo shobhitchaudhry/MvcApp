@@ -1,0 +1,60 @@
+﻿@model MvcApplicationTest.Models.Form1
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Form1</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FirstName) : 
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastName) : 
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Phone) : 
+        @Html.DisplayFor(model => model.Phone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address1) : 
+        @Html.DisplayFor(model => model.Address1)
+    </div>
+
+        <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address2) : 
+        @Html.DisplayFor(model => model.Address2)
+    </div>
+
+        <div class="display-label">
+         @Html.DisplayNameFor(model => model.City) : 
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+        <div class="display-label">
+        @Html.DisplayNameFor(model => model.Postal) : 
+        @Html.DisplayFor(model => model.Postal)
+    </div>
+
+        <div class="display-label">
+         @Html.DisplayNameFor(model => model.CoverLetter) : 
+         @Html.DisplayFor(model => model.CoverLetter)
+    </div>
+
+        <div class="display-label">
+         @Html.DisplayNameFor(model => model.Resume) : 
+        <a href='@string.Format("/Resumes/{0}", @Model.Resume)'>@Model.Resume</a>
+    </div>
+
+</fieldset>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
